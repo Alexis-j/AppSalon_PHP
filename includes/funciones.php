@@ -8,13 +8,8 @@ function obtener_servicios() {
         $sql = "SELECT * FROM servicios;";
         //realizar la consulta a la base de datos
         $consulta = mysqli_query($db, $sql);
-        // accerder a los resultados
-        echo "<pre>";
-        var_dump(mysqli_fetch_assoc($consulta));
-        echo "</pre>";
-        //mostrar los resultados
 
-        //cerrar la coneccion
+        return $consulta;
     }
     catch (\throwable $th) {
         var_dump($th);
